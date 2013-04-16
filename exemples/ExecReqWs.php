@@ -1,0 +1,1 @@
+﻿<?php// Si necessaire//set_include_path($include_path.';.\pear');include("TbsWsHelper.php");$tbsHelper = new TbsWsHelper('TbsExecReqWs', 'MARC', 'MARC');if (!$tbsHelper->isError()) {	$result = $tbsHelper->call('execDynReq', 'select nom_per,num_per from personne where rownum<3','XML');	print_r($result);}$tbsHelper->dispose();?>
