@@ -1,0 +1,51 @@
+N° Enr.;IDUTILIS;UTI_CU;UTI_ID;UTI_NO;UTI_SE;UTI_DR;UTI_RE;UTI_TE;UTI_PO;UTI_MP;UTI_MO;AGECPT;ROLESID
+5;5;SERVOY  ;    ;-                                       ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;SV      ;      ;0
+39;39;VENRES  ;    ;*                                       ;VENTES-RESA                             ;2,00131E+39;1E+40;                    ;    ;        ;VR      ;      ;0
+83;103;ADENOE  ;    ;Adeline NOEL                            ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;ANO     ;      ;0
+53;53;ADMIN0  ;    ;Administrateur                          ;DSI                                     ;0;1E+40;                    ;    ;        ;9091939;      ;1
+99;119;ALEHUD  ;    ;Alexandre HUDER                         ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;AHU     ;      ;0
+112;133;ALIALB  ;    ;Alice ALBERT                            ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;AA      ;      ;0
+103;124;ALIMAT  ;    ;Aline MATTERN                           ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;AMA     ;      ;9
+120;141;ANNCHA  ;    ;Anne CHAMBROUX                          ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;ACH     ;      ;0
+13;13;ARNVIS  ;    ;Arnaud VISBECQ                          ;DIRECTION                               ;2,00001E+39;1E+40;                    ;    ;        ;AV      ;      ;0
+107;128;AUDDAM  ;    ;Audrey DAMOUR                           ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;ADA     ;      ;9
+65;65;AUDFER  ;    ;Audrey FERNANDES                        ;VOYAGE                                  ;2,00121E+39;1E+40;                    ;    ;        ;AF      ;      ;0
+135;156;BENCAU  ;    ;Benjamin CAUDRON                        ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;BCA     ;      ;9
+80;100;BERTAL  ;    ;Bernard TALOUNI                         ;COMPTABILITE                            ;2,00301E+39;1E+40;                    ;    ;        ;BT      ;      ;0
+8;8;BORREI  ;    ;Boris REIBENBERG                        ;DIRECTION                               ;0;1E+40;                    ;    ;        ;JUSA    ;      ;0
+111;132;CARGIL  ;    ;Caroline GILBERT                        ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;CGI     ;      ;0
+106;127;CARTHO  ;    ;Caroline THOMAS                         ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;CT      ;      ;9
+122;143;CHRDEL  ;    ;Christelle DELANNOY                     ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;CHD     ;      ;0
+116;137;CORMAR  ;    ;Coraline MARTI                          ;RESA                                    ;2,00121E+39;1E+40;                    ;    ;        ;CMA     ;      ;7
+48;48;DAVGUI  ;    ;David GUILLEMET                         ;RESA                                    ;2,00001E+39;1E+40;                    ;    ;        ;DG      ;      ;7
+66;66;DOMEST  ;    ;Dominique ESTIER                        ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;ED      ;      ;0
+127;148;ELIBRI  ;    ;Elise BRILLANT                          ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;EBR     ;      ;0
+108;129;EMMLET  ;    ;Emma LETERTRE                           ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;ELE     ;      ;9
+102;123;ENZNIC  ;    ;Enzo NICOLAS                            ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;EN      ;      ;9
+119;140;FATDIA  ;    ;Fatimata DIAKHATE                       ;RESA                                    ;2,00001E+39;1E+40;                    ;    ;        ;FD      ;      ;7
+38;38;FRAALI  ;    ;Franck ALIBAY                           ;VENTES                                  ;2,00001E+39;1E+40;                    ;    ;        ;MINALI  ;      ;7
+109;130;FRALEB  ;    ;Frank LE BLET                           ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;FLB     ;      ;9
+2;2;FREREI  ;    ;Frédéric REIBENBERG                     ;RESA                                    ;0;1E+40;                    ;    ;        ;MUSTANG ;      ;7
+6;6;GREREI  ;    ;Grégory REIBENBERG                      ;DIRECTION                               ;2,00001E+39;1E+40;                    ;    ;        ;1717;      ;0
+84;104;ADMINGSI;    ;GSI                                     ;GSI                                     ;0;1E+40;                    ;    ;        ;ub9n5HB1;      ;1
+123;144;HELPIQ  ;    ;Hélène PIQUET                           ;MARKETING                               ;2,00121E+39;1E+40;                    ;    ;        ;HPI     ;      ;0
+29;29;HENDER  ;    ;Henri DERAI                             ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;HD      ;      ;0
+16;16;JADSUN  ;    ;Jade SUN                                ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;JS      ;      ;0
+10;10;J_JCHI  ;    ;Jean-Jacques CHIRON                     ;COMPTABILITE                            ;2,00301E+39;1E+40;                    ;    ;        ;JJC     ;      ;0
+118;139;JOCGOU  ;    ;Jocelyne GOULT                          ;VOYAGE                                  ;0;1E+40;                    ;    ;        ;JG      ;      ;0
+37;37;KARCHA  ;    ;Karine CHARLES-NICOLAS                  ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;KC      ;      ;0
+75;94;KHAGUE  ;    ;Khadija GUEDDOURI                       ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;KG      ;      ;0
+126;147;LAUDSU  ;    ;Laure DE SOUZA                          ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;LDS     ;      ;0
+7;7;MAGCOT  ;    ;Magaly COTTAZ                           ;DIRECTION                               ;0;1E+40;                    ;    ;        ;RAHCHA  ;5035;1
+124;145;MELLAU  ;    ;Mélanie LAUBIER                         ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;MLA     ;      ;9
+18;18;MICDUN  ;    ;Michelle DUNAIGRE                       ;DIRECTION                               ;2,00001E+39;1E+40;                    ;    ;        ;MD      ;      ;0
+9;9;MAJFIC  ;    ;Mise à Jour Fichiers                    ;DSI                                     ;0;1E+40;                    ;    ;        ;DEFI12  ;      ;0
+115;136;NACBEN  ;    ;Nacera BENHADDOU                        ;RESA                                    ;2,00121E+39;1E+40;                    ;    ;        ;NBE     ;      ;0
+113;134;NAIBEN  ;    ;Naïma BEN ADDI                          ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;NBA     ;      ;0
+42;42;SANAUB  ;    ;Sandrine AUBIN                          ;VENTES                                  ;0;1E+40;                    ;    ;        ;SA      ;      ;0
+136;157;SARPER  ;    ;Sarina PEREZ                            ;RÉSA                                    ;2,00121E+39;1E+40;                    ;    ;        ;SPE     ;      ;0
+11;11;STEMOU  ;    ;Stéphanie MOULINS                       ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;SM      ;      ;0
+72;90;SYLMAR  ;    ;Sylvie Marcel                           ;DIRECTION                               ;0;1E+40;                    ;    ;SM64    ;SM64    ;      ;7
+114;135;THODSA  ;    ;Thomas DOS SANTOS                       ;RESA                                    ;2,00121E+39;1E+40;                    ;    ;        ;TDS     ;      ;7
+101;122;VALSUL  ;    ;Valérie SUHLER                          ;COMMERCIAL                              ;2,00001E+39;1E+40;                    ;    ;        ;VS      ;      ;9
+131;152;VANGAR  ;    ;Vanessa GARANDEL                        ;VOYAGE                                  ;2,00301E+39;1E+40;                    ;    ;        ;VGA     ;      ;0
