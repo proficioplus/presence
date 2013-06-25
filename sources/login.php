@@ -91,7 +91,7 @@ function MM_swapImage() { //v3.0
 												<TD COLSPAN=7 width=346><HR SIZE=2 WIDTH=346 CLASS=STC-9-Color></TD>
 												<TD height=16/>
 											<TR>
-												<TD width=52><img src=prs-images/IMAG_contact.png width=40 height=40 hspace=0 vspace=0 border=0 name=A11 onClick="_T1(event)" CLASS=l-0></TD>
+												<TD width=52><img src="prs-images/IMAG_contact.png" width=40 height=40 hspace=0 vspace=0 border=0 name=A11 onClick="_T1(event)" CLASS=l-0></TD>
 												<TD COLSPAN=5 CLASS=STC-9-Simple valign=top id="tzA10" WIDTH=288>Un probl&egrave;me de connexion ou pour toute autre question, n'h&eacute;sitez pas &agrave; nous contacter en nous envoyant un message par le formulaire ; il sera trait&eacute; en priorit&eacute;. </TD>
 												<TD width=6/>
 												<TD height=81/>
@@ -128,7 +128,7 @@ function MM_swapImage() { //v3.0
 										<DIV id="dwwA13" STYLE="position:absolute;left:70;top:325;width:15;height:20;z-index:10;">
 											<table width=15 height=20>
 												<tr>
-													<td CLASS=Simple-Link valign=middle id="tzA13"><a name=A13 href="javascript:{_JSL(_PAGE_,'A13','_self','','')}" CLASS=Simple-Link>ici</a>
+													<td CLASS=Simple-Link valign=middle id="tzA13"><a name=A13 href="contact.php" CLASS=Simple-Link>ici</a>
 													</td>
 												</tr>
 											</table>

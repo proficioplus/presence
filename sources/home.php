@@ -130,7 +130,7 @@
 <TR><TD COLSPAN=3 HEIGHT=30/></TR><TR><TD width=998><table id=I1 bgcolor=#0066CC>
 <tr><td height=27 width=998 bgcolor=#0066CC valign=top><TABLE>
 <TR><TD ROWSPAN=3 WIDTH=20/><TD width=112/><TD width=223/><TD width=59/><TD height=7/>
-<TR><TD width=112><a name=I4 href="javascript:{_JSL(_PAGE_,'I4','_self','','')}" CLASS=STC-8-sitemap>Contactez-nous</a></TD><TD width=223><a name=I3 href="javascript:I5_T1()" CLASS=STC-8-sitemap>A jouter cette page dans vos favoris</a></TD><TD width=59><a name=I2 href="javascript:I5_T0()" CLASS=STC-8-sitemap>A propos</a></TD><TD height=20/>
+<TR><TD width=112><a name=I4 href="contact.php" CLASS=STC-8-sitemap>Contactez-nous</a></TD><TD width=223><a name=I3 href="javascript:I5_T1()" CLASS=STC-8-sitemap>A jouter cette page dans vos favoris</a></TD><TD width=59><a name=I2 href="javascript:I5_T0()" CLASS=STC-8-sitemap>A propos</a></TD><TD height=20/>
 <TR class=d-0><TD width=112/><TD width=223/><TD width=59/><TD/>
 </TABLE></td></tr></table></TD><TD height=27/>
 <TR><TD width=998/><TD/>
