@@ -1,4 +1,33 @@
-<HTML>
+<?php 
+	ob_start();
+	require_once("includes/initialize.php"); 
+?>
+<?php
+	if($session->is_logged_in()) {
+	  redirect_to("home.php");
+	}
+
+	// Remember to give your form's submit tag a name="submit" attribute!
+	if (isset($_POST['submit'])) { // Form has been submitted.
+		  $username = trim($_POST['name']);
+		  $password = trim($_POST['psswrd']);
+		  
+		  // Check database to see if username/password exist.
+		  $found_user = User::authenticate($username, $password);
+		  if ($found_user) {
+		    	$session->login($found_user->agecpt,$found_user->prenomNom);
+		    	redirect_to("home.php");
+		  } else {
+		    // username/password combo was not found in the database
+		    $message="Compte ou mot de passe incorrect.<br />Veuillez réessayer svp.";
+		    $message_id=1;
+		  }
+	} else { // Form has not been submitted.
+		$username = "";
+		$password = "";
+	}
+?>
+<HTML style="overflow:hidden;">
 	<HEAD>
 		<TITLE>Pr&eacute;sence Assistance - Accueil</TITLE>
 		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
@@ -10,27 +39,27 @@
 		</style>
 		<link REL="stylesheet" TYPE="text/css" HREF="prs-css/style.css">
 		<script type="text/javascript">
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
+			function MM_swapImgRestore() { //v3.0
+			  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+			}
+			function MM_preloadImages() { //v3.0
+			  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+			    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+			    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+			}
+			
+			function MM_findObj(n, d) { //v4.01
+			  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+			    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+			  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+			  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+			  if(!x && d.getElementById) x=d.getElementById(n); return x;
+			}
+			
+			function MM_swapImage() { //v3.0
+			  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+			   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+			}
         </script>
 	</HEAD>
 	<BODY bgcolor=#FFFFFF leftmargin=0 topmargin=0 onLoad="MM_preloadImages('../../../../prs-images/Valider_over.GIF')">
@@ -38,7 +67,7 @@ function MM_swapImage() { //v3.0
 	<tr align=left valign=top>
 	<td>
 	<div style="position:relative">
-		<form NAME="PAGE_LOGINPROFESSIONNEL" ACTION="" target=_self METHOD=POST>
+		<form action="login.php" method="post" id="login_form">
 			<div style="position:absolute;left:0;top:0;z-index:0;width:389">
 				<TABLE STYLE="position:relative;left:0;">
 					<TR><TD COLSPAN=2 HEIGHT=152/></TR>
@@ -61,7 +90,7 @@ function MM_swapImage() { //v3.0
 													<table width=222 height=28>
 														<tr>
 															<td valign=middle id="tzA1">
-																<INPUT TYPE=TEXT SIZE=18 MAXLENGTH="10" NAME=A1 VALUE="" id="A1" CLASS=l-1>
+																<INPUT TYPE=TEXT SIZE=18 MAXLENGTH="10" name="name" id="name" CLASS=l-1>
 															</td>
 														</tr>
 													</table>
@@ -74,15 +103,19 @@ function MM_swapImage() { //v3.0
 												<TD COLSPAN=4 WIDTH=222>
 													<table width=222 height=28>
 														<tr>
-															<td valign=middle id="tzA2"><INPUT TYPE=PASSWORD SIZE=18 MAXLENGTH="10" NAME=A2 VALUE="" id="A2" CLASS=l-1></td>
+															<td valign=middle id="tzA2">
+																<INPUT TYPE=PASSWORD SIZE=18 MAXLENGTH="10" name="psswrd" id="psswrd" CLASS=l-1>
+															</td>
 														</tr>
 													</table>
 												</TD>
 												<TD height=28/>
-											<TR><TD COLSPAN=6 width=340/><TD height=8/>
+											<TR><TD COLSPAN=6 width=340/><?php echo '<font face="verdana" size="2" color="red">'.$message.'</font>'; ?><TD height=8/>
 											<TR>
 												<TD COLSPAN=3 ROWSPAN=2 width=153 height=40/>
-												<TD ROWSPAN=2 width=97 height=40><a href="home.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('valider','','prs-images/Valider_over.GIF',1)"><img src="prs-images/Valider.GIF" alt="Valider" name="valider" width="80" height="24" border="0"></a></TD>
+												<TD ROWSPAN=2 width=97 height=40>
+													<input type="image" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('valider','','prs-images/Valider_over.GIF',1)" src="prs-images/Valider.GIF" alt="Valider" name="submit" value="LOGIN" />
+												</TD>
 											<TD ROWSPAN=2 width=97 height=40><a href="index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('annuler','','prs-images/Annuler_over.GIF',1)"><img src="prs-images/Annuler.GIF" alt="Valider" name="annuler" width="80" height="24" border="0"></a></TD>
 											<TR>
 												<TD COLSPAN=2 width=90>&nbsp;</TD>
@@ -153,3 +186,6 @@ function MM_swapImage() { //v3.0
 		</table>
 	</BODY>
 </HTML>
+<?php
+  ob_end_flush();
+?>

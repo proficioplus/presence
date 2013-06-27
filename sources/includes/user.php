@@ -1,31 +1,31 @@
 <?php
 	// If it's going to need the database, then it's 
 	// probably smart to require it before we start.
-	require_once(LIB_PATH.DS.'database.php');
+	require_once('database.php');
 	
 	class User {
 		
-		protected static $table_name="users";
-		protected static $db_fields = array('id', 'name', 'password', 'email', 'pic');
+		protected static $table_name="EPATUT";
+		protected static $db_fields = array('AGECPT', 'Identifiant', 'MotdePasse', 'PrenomNom', 'ROLESID', 'Service', 'UACTIF');
 		
-		public $id;
-		public $name;
-		public $password;
+		public $agecpt;
+		public $Identifiant;
+		public $MotdePasse;
 		public $email;
 		public $pic;
 		
 	  
-		public static function authenticate($email="", $password="") {
-	    global $database;
-	    $username = $database->escape_value($email);
-	    $password = $database->escape_value($password);
-	
-	    $sql  = "SELECT * FROM users ";
-	    $sql .= "WHERE email = '{$email}' ";
-	    $sql .= "AND password = '{$password}' ";
-	    $sql .= "LIMIT 1";
-	    $result_array = self::find_by_sql($sql);
-			return !empty($result_array) ? array_shift($result_array) : false;
+		public static function authenticate($agecpt="", $MotdePasse="") {
+		    global $database;
+		    $agecpt = $database->escape_value($agecpt);
+		    $MotdePasse = $database->escape_value($MotdePasse);
+		
+		    $sql  = "SELECT * FROM EPATUT ";
+		    $sql .= "WHERE AGECPT = '{$agecpt}' ";
+		    $sql .= "AND MotdePasse = '{$MotdePasse}' ";
+		    $sql .= "LIMIT 1";
+		    $result_array = self::find_by_sql($sql);
+				return !empty($result_array) ? array_shift($result_array) : false;
 		}
 	
 		// Common Database Methods
@@ -33,12 +33,12 @@
 			return self::find_by_sql("SELECT * FROM ".self::$table_name);
 	  }
 	  
-	  public static function find_by_id($id=0) {
-	    $result_array = self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE id={$id} LIMIT 1");
+	  public static function find_by_agecpt($agecpt=0) {
+	    $result_array = self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE AGECPT={$agecpt} LIMIT 1");
 			return !empty($result_array) ? array_shift($result_array) : false;
 	  }
-	  public static function find_by_email($email) {
-	    $result_array = self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE email='{$email}' LIMIT 1");
+	  public static function find_by_id($Identifiant) {
+	    $result_array = self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE Identifiant='{$Identifiant}' LIMIT 1");
 			return !empty($result_array) ? array_shift($result_array) : false;
 	  }
 	  
@@ -62,13 +62,15 @@
 	
 		private static function instantiate($record) {
 			// Could check that $record exists and is an array
-	    $object = new self;
+			$object = new self;
 			// Simple, long-form approach:
-			// $object->id 				= $record['id'];
-			// $object->username 	= $record['username'];
-			// $object->password 	= $record['password'];
-			// $object->first_name = $record['first_name'];
-			// $object->last_name 	= $record['last_name'];
+			 $object->agecpt 			= $record['AGECPT'];
+			 $object->identifiant 		= $record['Identifiant'];
+			 $object->password 			= $record['MotdePasse'];
+			 $object->prenomNom 		= $record['PrenomNom'];
+			 $object->rolesid 			= $record['ROLESID'];
+			 $object->service 			= $record['Service'];
+			 $object->uactif 			= $record['UACTIF'];
 			
 			// More dynamic, short-form approach:
 			foreach($record as $attribute=>$value){
@@ -145,7 +147,7 @@
 			}
 			$sql = "UPDATE ".self::$table_name." SET ";
 			$sql .= join(", ", $attribute_pairs);
-			$sql .= " WHERE id=". $database->escape_value($this->id);
+			$sql .= " WHERE AGECPT=". $database->escape_value($this->id);
 		  $database->query($sql);
 		  echo $sql;
 		  return ($database->affected_rows() == 1) ? true : false;
@@ -158,7 +160,7 @@
 			// - escape all values to prevent SQL injection
 			// - use LIMIT 1
 		  $sql = "DELETE FROM ".self::$table_name;
-		  $sql .= " WHERE id=". $database->escape_value($this->id);
+		  $sql .= " WHERE AGECPT=". $database->escape_value($this->id);
 		  $sql .= " LIMIT 1";
 		  $database->query($sql);
 		  return ($database->affected_rows() == 1) ? true : false;

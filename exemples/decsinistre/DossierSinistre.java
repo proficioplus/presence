@@ -1,4 +1,4 @@
-/*
+a/*
  * @(#)DossierSinistre.java	1.0		le 20 nov. 2011.
  *
  * Copyright 2006-2009 TBS-Solutions, Tout droit réservé.

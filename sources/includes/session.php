@@ -31,9 +31,11 @@
 		public function login($user_id, $user_name) {
 		    // database should find user based on username/password
 		    if($user_id){
-		      $this->user_id = $_SESSION['user_id'] = $user_id;
-		      $this->user_name = $_SESSION['user_name'] = $user_name;
-		      $this->logged_in = true;
+		    	$_SESSION['user_id'] = $user_id;
+		    	$this->user_id = $_SESSION['user_id'];
+		    	$_SESSION['user_name'] = $user_name;;
+		    	$this->user_name = $_SESSION['user_name'];
+		    	$this->logged_in = true;
 		    }
 		}
 		  

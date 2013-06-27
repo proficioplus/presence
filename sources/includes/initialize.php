@@ -5,27 +5,25 @@
 	
 	// DIRECTORY_SEPARATOR is a PHP pre-defined constant
 	// (\ for Windows, / for Unix)
+	
 	defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 	
-	defined('SITE_ROOT') ? null : 
-		define('SITE_ROOT', 'www.proficioplus.com'.DS.'presence');
+	defined('SITE_ROOT') ? null : define('SITE_ROOT', 'www.proficioplus.com'.DS.'presence');
 	
 	defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 	
 	// load config file first
-	require_once(LIB_PATH.DS.'config.php');
+	require_once('config.php');
 	
 	// load basic functions next so that everything after can use them
-	require_once(LIB_PATH.DS.'functions.php');
+	require_once('functions.php');
 	// load core objects
-	require_once(LIB_PATH.DS.'session.php');
-	require_once(LIB_PATH.DS.'database.php');
+	require_once('session.php');
+	require_once('database.php');
 	
 	// load database-related classes
-	require_once(LIB_PATH.DS.'pagination.php');
-	require_once(LIB_PATH.DS.'file.php');
-	require_once(LIB_PATH.DS.'settings.php');
-	require_once(LIB_PATH.DS.'user.php');
-
+	require_once('file.php');
+	require_once('settings.php');
+	require_once('user.php');
 	
 ?>

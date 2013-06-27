@@ -1,3 +1,9 @@
+<?php
+ob_start();
+ require_once("includes/initialize.php"); ?>
+<?php 
+	if ($session->is_logged_in() == false) redirect_to("login.php");
+?>
 <HTML>
 	<HEAD>
 		<TITLE>Pr&eacute;sence Assistance - Contacts Vendeurs</TITLE>
@@ -39,7 +45,7 @@
 																		<TD COLSPAN=2 ROWSPAN=2 width=48 height=24/>
 																		<TD height=2/>
 																	<TR>
-																		<TD width=74><a name=M2 CLASS=l-3>D&eacute;connexion</a></TD>
+																		<TD width=74><a name=M2 CLASS=l-3 href="logout.php">D&eacute;connexion</a></TD>
 																		<TD height=22/>
 																	<TR>
 																		<TD width=1/>
@@ -96,3 +102,6 @@
 </TABLE></div>
 	</BODY>
 </HTML>
+<?php
+  ob_end_flush();
+?>
